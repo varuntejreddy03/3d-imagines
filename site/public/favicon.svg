@@ -1,0 +1,9 @@
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3D Imagines mark">
+  <!-- Open circular bracket -->
+  <path d="M183.64 183.64 A90 90 0 1 1 183.64 56.36"
+        fill="none" stroke="#F5820A" stroke-width="16" stroke-linecap="round"/>
+  <!-- Ascending bar-chart motif -->
+  <rect x="72"  y="130" width="28" height="65"  rx="6" fill="#F5820A"/>
+  <rect x="106" y="85"  width="28" height="110" rx="6" fill="#F5820A"/>
+  <rect x="140" y="20"  width="28" height="175" rx="6" fill="#F5820A"/>
+</svg>
