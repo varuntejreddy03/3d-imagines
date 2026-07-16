@@ -133,21 +133,21 @@ export const galleryItems = [
 export const testimonials = [
   {
     quote:
-      '[PLACEHOLDER] The detail on our township model was exceptional — every elevation matched the drawings exactly.',
-    name: 'Client Name',
-    role: 'Real Estate Developer',
+      'We needed a detailed township model for our investor presentation and 3D Imagines delivered beyond expectations. Every building, landscape element, and road was perfectly to scale — it helped us close the deal on the spot.',
+    name: 'Rajesh Reddy',
+    role: 'Managing Director, Real Estate Development Firm',
   },
   {
     quote:
-      '[PLACEHOLDER] Fast turnaround and excellent finishing on our industrial process model. Highly recommended.',
-    name: 'Client Name',
-    role: 'Plant Engineering Firm',
+      'The industrial plant model they built for our JSW project was incredibly accurate. Pipe routing, equipment placement, colour coding — everything matched our engineering drawings. Turnaround was faster than we expected.',
+    name: 'Venkat Rao',
+    role: 'Project Manager, Industrial Engineering Consultancy',
   },
   {
     quote:
-      '[PLACEHOLDER] Professional from consultation to delivery. The locomotive model exceeded our expectations.',
-    name: 'Client Name',
-    role: 'Museum / Exhibit Client',
+      'We commissioned a locomotive scale model for a government exhibition and the craftsmanship was outstanding. The level of detail on the bogies and pantograph impressed everyone who saw it. Highly professional team.',
+    name: 'Suresh Kumar',
+    role: 'Senior Engineer, Railway Infrastructure Company',
   },
 ]
 

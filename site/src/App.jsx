@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -13,6 +14,12 @@ import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 
 export default function App() {
+  useEffect(() => {
+    const handler = (e) => { if (e.target.tagName === 'IMG') e.preventDefault() }
+    document.addEventListener('contextmenu', handler)
+    return () => document.removeEventListener('contextmenu', handler)
+  }, [])
+
   return (
     <div className="flex min-h-screen flex-col">
       <ScrollToTop />

@@ -32,7 +32,7 @@ export default function About() {
                 src={WORKSHOP_IMAGE}
                 alt="High-rise residential tower scale model built by 3D Imagines"
                 loading="lazy"
-                className="aspect-[4/5] w-full object-cover"
+                className="aspect-[4/5] w-full object-contain bg-ink"
               />
             </div>
           </Reveal>

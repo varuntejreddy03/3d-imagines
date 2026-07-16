@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Award,
@@ -20,6 +21,7 @@ import CTASection from '../components/CTASection'
 import ClientsSection from '../components/ClientsSection'
 import MapSection from '../components/MapSection'
 import BarMotif from '../components/BarMotif'
+import Lightbox from '../components/Lightbox'
 import {
   advantages,
   faqs,
@@ -35,6 +37,8 @@ const advantageIcons = [Award, Clock3, Cpu, SlidersHorizontal, Sparkles, Globe2]
 const ABOUT_IMAGE = '/gallery/architectural/img-13.jpeg'
 
 export default function Home() {
+  const [lightbox, setLightbox] = useState(null)
+
   return (
     <>
       <Hero />
@@ -71,7 +75,7 @@ export default function Home() {
                 src={ABOUT_IMAGE}
                 alt="Sindhu Hospitals architectural scale model built by 3D Imagines"
                 loading="lazy"
-                className="aspect-[4/5] w-full object-cover"
+                className="aspect-[4/5] w-full object-contain bg-ink"
               />
             </div>
           </Reveal>
@@ -152,14 +156,17 @@ export default function Home() {
 
         <RevealGroup className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {galleryItems.slice(0, 8).map((item) => (
-            <RevealItem key={item.title} className="group relative overflow-hidden rounded-xl bg-surface-alt">
+            <RevealItem key={item.title} className="group relative cursor-pointer overflow-hidden rounded-xl bg-surface-alt">
               <img
                 src={item.image}
                 alt={item.title}
                 loading="lazy"
-                className="aspect-[4/3] w-full object-contain transition duration-500 group-hover:scale-105"
+                draggable={false}
+                onContextMenu={(e) => e.preventDefault()}
+                onClick={() => setLightbox(item)}
+                className="aspect-[4/3] w-full select-none object-contain transition duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink/85 via-ink/10 to-transparent p-4 opacity-0 transition group-hover:opacity-100">
+              <div className="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink/85 via-ink/10 to-transparent p-4 opacity-0 transition group-hover:opacity-100">
                 <p className="eyebrow !text-white/70">{item.category}</p>
                 <p className="text-sm font-semibold text-white">{item.title}</p>
               </div>
@@ -214,6 +221,10 @@ export default function Home() {
 
       {/* Map & Location */}
       <MapSection />
+
+      {lightbox && (
+        <Lightbox image={lightbox.image} alt={lightbox.title} onClose={() => setLightbox(null)} />
+      )}
 
       <CTASection />
     </>

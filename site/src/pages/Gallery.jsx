@@ -2,15 +2,20 @@ import { useMemo, useState } from 'react'
 import PageHeader from '../components/PageHeader'
 import { RevealGroup, RevealItem } from '../components/Reveal'
 import CTASection from '../components/CTASection'
+import Lightbox from '../components/Lightbox'
 import { galleryItems } from '../data/content'
 
-const FILTERS = ['All', 'Architectural', 'Industrial', 'Engineering']
+const FILTERS = ['All', 'Architectural', 'Industrial', 'Locomotive']
 
 export default function Gallery() {
   const [active, setActive] = useState('All')
+  const [lightbox, setLightbox] = useState(null)
 
   const filtered = useMemo(
-    () => (active === 'All' ? galleryItems : galleryItems.filter((item) => item.category === active)),
+    () => (active === 'All' ? galleryItems : galleryItems.filter((item) => {
+      if (active === 'Locomotive') return item.category === 'Engineering'
+      return item.category === active
+    })),
     [active],
   )
 
@@ -41,14 +46,17 @@ export default function Gallery() {
 
         <RevealGroup key={active} className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {filtered.map((item) => (
-            <RevealItem key={item.title + item.category} className="group relative overflow-hidden rounded-xl bg-surface-alt">
+            <RevealItem key={item.title + item.category} className="group relative cursor-pointer overflow-hidden rounded-xl bg-surface-alt">
               <img
                 src={item.image}
                 alt={item.title}
                 loading="lazy"
-                className="aspect-[4/3] w-full object-contain transition duration-500 group-hover:scale-105"
+                draggable={false}
+                onContextMenu={(e) => e.preventDefault()}
+                onClick={() => setLightbox(item)}
+                className="aspect-[4/3] w-full select-none object-contain transition duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink/85 via-ink/10 to-transparent p-4 opacity-0 transition group-hover:opacity-100">
+              <div className="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink/85 via-ink/10 to-transparent p-4 opacity-0 transition group-hover:opacity-100">
                 <p className="eyebrow !text-white/70">{item.category}</p>
                 <p className="text-sm font-semibold text-white">{item.title}</p>
               </div>
@@ -56,6 +64,10 @@ export default function Gallery() {
           ))}
         </RevealGroup>
       </section>
+
+      {lightbox && (
+        <Lightbox image={lightbox.image} alt={lightbox.title} onClose={() => setLightbox(null)} />
+      )}
 
       <CTASection />
     </>
