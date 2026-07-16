@@ -17,6 +17,8 @@ import StatCounter from '../components/StatCounter'
 import TestimonialCard from '../components/TestimonialCard'
 import FAQAccordion from '../components/FAQAccordion'
 import CTASection from '../components/CTASection'
+import ClientsSection from '../components/ClientsSection'
+import MapSection from '../components/MapSection'
 import BarMotif from '../components/BarMotif'
 import {
   advantages,
@@ -30,8 +32,7 @@ import {
 
 const advantageIcons = [Award, Clock3, Cpu, SlidersHorizontal, Sparkles, Globe2]
 
-const ABOUT_IMAGE =
-  'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80'
+const ABOUT_IMAGE = '/gallery/architectural/img-13.jpeg'
 
 export default function Home() {
   return (
@@ -68,7 +69,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-[2rem] border-4 border-surface shadow-xl">
               <img
                 src={ABOUT_IMAGE}
-                alt="Craftsman finishing a scale model"
+                alt="Sindhu Hospitals architectural scale model built by 3D Imagines"
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
@@ -186,8 +187,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Clients */}
+      <ClientsSection />
+
       {/* Testimonials */}
-      <section className="bg-surface-alt py-24 lg:py-32">
+      <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <SectionHeading eyebrow="Testimonials" title="What clients say" align="center" />
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -199,12 +203,17 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="mx-auto max-w-4xl px-6 py-24 lg:py-32">
-        <SectionHeading eyebrow="FAQs" title="Frequently asked questions" align="center" />
-        <div className="mt-12">
-          <FAQAccordion items={faqs} />
+      <section className="bg-surface-alt py-24 lg:py-32">
+        <div className="mx-auto max-w-4xl px-6">
+          <SectionHeading eyebrow="FAQs" title="Frequently asked questions" align="center" />
+          <div className="mt-12">
+            <FAQAccordion items={faqs} />
+          </div>
         </div>
       </section>
+
+      {/* Map & Location */}
+      <MapSection />
 
       <CTASection />
     </>

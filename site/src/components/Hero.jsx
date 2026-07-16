@@ -3,8 +3,7 @@ import { stats } from '../data/content'
 import StatCounter from './StatCounter'
 import Button from './Button'
 
-const HERO_IMAGE =
-  'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80'
+const HERO_IMAGE = '/gallery/architectural/img-16.jpeg'
 
 export default function Hero() {
   return (
@@ -12,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src={HERO_IMAGE}
-          alt="Precision architectural scale model under studio light"
+          alt="Aerial view of an illuminated architectural township scale model built by 3D Imagines"
           className="absolute inset-0 h-full w-full object-cover opacity-45"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/30" />

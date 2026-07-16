@@ -4,7 +4,7 @@ import { RevealGroup, RevealItem } from '../components/Reveal'
 import CTASection from '../components/CTASection'
 import { galleryItems } from '../data/content'
 
-const FILTERS = ['All', 'Architectural', 'Industrial', 'Locomotive', '3D Printed']
+const FILTERS = ['All', 'Architectural', 'Industrial', 'Engineering']
 
 export default function Gallery() {
   const [active, setActive] = useState('All')
@@ -19,7 +19,7 @@ export default function Gallery() {
       <PageHeader
         eyebrow="Portfolio"
         title="Project Gallery"
-        description="A selection of architectural, industrial, locomotive, and 3D-printed models from our workshop."
+        description="Real project photography — architectural, industrial, and engineering scale models from our Hyderabad workshop."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">

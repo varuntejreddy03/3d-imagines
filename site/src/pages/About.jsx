@@ -9,8 +9,7 @@ import { advantages, business } from '../data/content'
 
 const advantageIcons = [Award, Clock3, Cpu, SlidersHorizontal, Sparkles, Globe2]
 
-const WORKSHOP_IMAGE =
-  'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80'
+const WORKSHOP_IMAGE = '/gallery/architectural/img-04.jpeg'
 
 export default function About() {
   return (
@@ -31,7 +30,7 @@ export default function About() {
             <div className="overflow-hidden rounded-[2rem] border-4 border-surface shadow-xl">
               <img
                 src={WORKSHOP_IMAGE}
-                alt="3D Imagines workshop"
+                alt="High-rise residential tower scale model built by 3D Imagines"
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />

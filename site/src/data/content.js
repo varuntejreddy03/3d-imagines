@@ -7,6 +7,7 @@ export const business = {
   founded: 2009,
   teamExperience: '30+ years combined',
   phones: ['9948119395', '6309669395'],
+  whatsapp: '919948119395',
   email: '3dimagines2009@gmail.com',
   address:
     '1st Floor, 1-7-139/81, Golconda X Roads, Musheerabad, Zamistanpur, SRK Nagar, Hyderabad, Telangana 500020',
@@ -25,11 +26,12 @@ export const business = {
 }
 
 // Single set of stats used everywhere (hero strip + stats band) — no conflicting numbers.
+// NOTE: Client Retention Rate below is a placeholder (92%) — swap for your real figure.
 export const stats = [
   { value: 15, suffix: '+', label: 'Years in Business' },
   { value: 30, suffix: '+', label: 'Years Combined Team Experience' },
   { value: 500, suffix: '+', label: 'Projects Delivered' },
-  { value: 2, suffix: '', label: 'Manufacturing Techniques', detail: 'SLA + FDM 3D Printing' },
+  { value: 92, suffix: '%', label: 'Client Retention Rate' },
 ]
 
 export const advantages = [
@@ -71,8 +73,7 @@ export const serviceCategories = [
       'Architectural interior models',
       'Master plan / township models',
     ],
-    image:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    image: '/gallery/architectural/img-13.jpeg',
   },
   {
     slug: 'industrial-models',
@@ -85,8 +86,7 @@ export const serviceCategories = [
       'Locomotive scale models',
       'Process / plant layout models',
     ],
-    image:
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+    image: '/gallery/industrial/img-24.jpeg',
   },
   {
     slug: '3d-printing',
@@ -109,16 +109,24 @@ export const processSteps = [
   { title: 'Quality Check & Delivery', description: 'A final precision check before careful packaging and delivery.' },
 ]
 
+// Real project photography supplied by the client, organized under public/gallery/.
 export const galleryItems = [
-  { category: 'Architectural', title: 'Township Master Plan', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80' },
-  { category: 'Industrial', title: 'Process Plant Layout', image: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=900&q=80' },
-  { category: 'Locomotive', title: 'Locomotive Scale Model', image: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=900&q=80' },
-  { category: '3D Printed', title: 'SLA Detail Components', image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80' },
-  { category: 'Architectural', title: 'Residential Exterior', image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80' },
-  { category: 'Industrial', title: 'Equipment Assembly Model', image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80' },
-  { category: 'Architectural', title: 'Commercial Tower Model', image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80' },
-  { category: '3D Printed', title: 'FDM Structural Prototype', image: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=900&q=80' },
-  { category: 'Locomotive', title: 'Rail Yard Diorama', image: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=900&q=80' },
+  { category: 'Architectural', title: 'Township Master Plan', image: '/gallery/architectural/img-01.jpeg' },
+  { category: 'Industrial', title: 'Cement Plant Model', image: '/gallery/industrial/img-01.jpeg' },
+  { category: 'Engineering', title: 'Rail Borne Maintenance Vehicle', image: '/gallery/locomotive/img-01.jpeg' },
+  { category: 'Architectural', title: 'Sindhu Hospitals', image: '/gallery/architectural/img-13.jpeg' },
+  { category: 'Architectural', title: 'Glass Tower Complex', image: '/gallery/architectural/img-03.jpeg' },
+  { category: 'Industrial', title: 'Steel Process Plant', image: '/gallery/industrial/img-06.jpeg' },
+  { category: 'Engineering', title: 'DFCCIL Inspection Car', image: '/gallery/locomotive/img-05.jpeg' },
+  { category: 'Architectural', title: 'Residential Tower', image: '/gallery/architectural/img-04.jpeg' },
+  { category: 'Industrial', title: 'Power Plant Layout', image: '/gallery/industrial/img-12.jpeg' },
+  { category: 'Engineering', title: 'Hyderabad Metro Rail', image: '/gallery/locomotive/img-10.jpeg' },
+  { category: 'Architectural', title: 'Residential Arches', image: '/gallery/architectural/img-06.jpeg' },
+  { category: 'Industrial', title: 'JSW Illuminated Plant', image: '/gallery/industrial/img-24.jpeg' },
+  { category: 'Engineering', title: 'MT Vamsee II — Marine Model', image: '/gallery/locomotive/img-11.jpeg' },
+  { category: 'Architectural', title: 'Solar-Roofed Corporate Building', image: '/gallery/architectural/img-08.jpeg' },
+  { category: 'Industrial', title: 'Vertical Plate Airblow Equipment', image: '/gallery/industrial/img-30.jpeg' },
+  { category: 'Architectural', title: 'Aerial Township View', image: '/gallery/architectural/img-16.jpeg' },
 ]
 
 // Placeholder — client to supply real testimonials at launch.
@@ -186,6 +194,90 @@ export const faqs = [
   },
 ]
 
+// Real client logos supplied by the client, organized under public/clients/.
+export const clients = [
+  // Architectural
+  { name: 'HMDA', logo: '/clients/architectural/hmda.jpg', category: 'Architectural' },
+  { name: 'VMRDA', logo: '/clients/architectural/vmrda.png', category: 'Architectural' },
+  { name: 'Dell', logo: '/clients/architectural/dell.jpg', category: 'Architectural' },
+  { name: 'Andhra Bank', logo: '/clients/architectural/andhra-bank.jpg', category: 'Architectural' },
+  { name: 'Sindhu Hospitals', logo: '/clients/architectural/sindhu-hospitals.jpg', category: 'Architectural' },
+  { name: 'ACE', logo: '/clients/architectural/ace.jpg', category: 'Architectural' },
+  { name: 'Buildox', logo: '/clients/architectural/buildox.jpg', category: 'Architectural' },
+  { name: 'IKP', logo: '/clients/architectural/ikp.png', category: 'Architectural' },
+  { name: 'Namishree Infrastructure', logo: '/clients/architectural/namishree.png', category: 'Architectural' },
+  { name: 'Omsree', logo: '/clients/architectural/omsree.png', category: 'Architectural' },
+  { name: 'PNPL', logo: '/clients/architectural/pnpl.png', category: 'Architectural' },
+  { name: 'Pride India', logo: '/clients/architectural/pride-india.png', category: 'Architectural' },
+  { name: 'Siddipet IT Hub', logo: '/clients/architectural/siddipet-it-hub-logo.jpg', category: 'Architectural' },
+  { name: 'Skandhanshi Infra', logo: '/clients/architectural/skandanshi.png', category: 'Architectural' },
+  { name: 'Teja Homes', logo: '/clients/architectural/teja-homes.jpg', category: 'Architectural' },
+  { name: 'Vertex', logo: '/clients/architectural/vertex.png', category: 'Architectural' },
+
+  // Industrial
+  { name: 'NTPC', logo: '/clients/industrial/ntpc-logo.jpg', category: 'Industrial' },
+  { name: 'Indian Oil Corporation', logo: '/clients/industrial/indian-oil-corporation.png', category: 'Industrial' },
+  { name: 'JSW Group', logo: '/clients/industrial/jsw-group.webp', category: 'Industrial' },
+  { name: 'JSW Cement', logo: '/clients/industrial/jsw-cement.png', category: 'Industrial' },
+  { name: 'Adani Cement', logo: '/clients/industrial/adani-cement.jpg', category: 'Industrial' },
+  { name: 'Bharathi Cement', logo: '/clients/industrial/bharathi-cement.png', category: 'Industrial' },
+  { name: 'Orient Cement', logo: '/clients/industrial/orient-cement.png', category: 'Industrial' },
+  { name: 'Bharat Petroleum', logo: '/clients/industrial/bharat-petroleum.png', category: 'Industrial' },
+  { name: 'Ramky Enviro', logo: '/clients/industrial/ramky-enviro.webp', category: 'Industrial' },
+  { name: 'Chiripal Poly Films', logo: '/clients/industrial/chiripal-poly-films.jpg', category: 'Industrial' },
+  { name: 'KCP Sugar & Industries', logo: '/clients/industrial/kcp-sugar-industries.jpg', category: 'Industrial' },
+  { name: 'Agarwal Steel Corporation', logo: '/clients/industrial/agarwal-steel-corporation.jpg', category: 'Industrial' },
+
+  // Engineering / Locomotive
+  { name: 'DFCCIL', logo: '/clients/locomotive/dfccilindia-logo.jpg', category: 'Engineering' },
+  { name: 'Hyderabad Metro Rail', logo: '/clients/locomotive/hyderabad-metro-rail.jpg', category: 'Engineering' },
+  { name: 'Larsen & Toubro', logo: '/clients/locomotive/larsen-toubro.jpg', category: 'Engineering' },
+  { name: 'Bharat Earth Movers', logo: '/clients/locomotive/bharat-earth-movers-logo-svg.webp', category: 'Engineering' },
+  { name: 'NCRTC', logo: '/clients/locomotive/ncrtc.png', category: 'Engineering' },
+  { name: 'Loram', logo: '/clients/locomotive/loram.png', category: 'Engineering' },
+  { name: 'Phooltas Transrail', logo: '/clients/locomotive/phooltas-transrail.png', category: 'Engineering' },
+  { name: 'SAN Engineering & Locomotive', logo: '/clients/locomotive/san-engineering-locomotive.jpg', category: 'Engineering' },
+]
+
+export const blogPosts = [
+  {
+    slug: 'why-scale-models-still-matter',
+    title: 'Why Physical Scale Models Still Matter in a Digital Age',
+    excerpt:
+      'Renders and VR are everywhere — yet a physical scale model closes deals renders can’t. Here’s why tactile models remain the strongest presentation tool.',
+    category: 'Insights',
+    date: 'June 2026',
+    image: '/gallery/architectural/img-19.jpeg',
+  },
+  {
+    slug: 'choosing-the-right-scale',
+    title: 'How to Choose the Right Scale for Your Architectural Model',
+    excerpt:
+      'From 1:50 to 1:500 — picking the right ratio balances detail, footprint, and budget. A practical guide for architects and developers.',
+    category: 'Guides',
+    date: 'May 2026',
+    image: '/gallery/architectural/img-04.jpeg',
+  },
+  {
+    slug: 'sla-vs-fdm-3d-printing',
+    title: 'SLA vs FDM: Which 3D Printing Method Fits Your Model?',
+    excerpt:
+      'Fine detail or structural strength? We break down the two 3D printing technologies we use and when each one wins.',
+    category: 'Technology',
+    date: 'April 2026',
+    image: '/gallery/industrial/img-30.jpeg',
+  },
+  {
+    slug: 'inside-our-model-making-process',
+    title: 'Inside Our Model-Making Process: From Drawing to Delivery',
+    excerpt:
+      'A behind-the-scenes look at how a set of drawings becomes a finished, presentation-ready scale model in our Hyderabad workshop.',
+    category: 'Behind the Scenes',
+    date: 'March 2026',
+    image: '/gallery/locomotive/img-10.jpeg',
+  },
+]
+
 export const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
@@ -199,5 +291,6 @@ export const navLinks = [
     ],
   },
   { label: 'Gallery', to: '/gallery' },
+  { label: 'Blog', to: '/blog' },
   { label: 'Contact', to: '/contact' },
 ]
