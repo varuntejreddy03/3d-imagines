@@ -14,12 +14,12 @@ export default function ServiceCard({ service, index = 0 }) {
         {String(index + 1).padStart(2, '0')}
       </span>
 
-      <div className="aspect-[4/5] w-full overflow-hidden">
+      <div className="aspect-[4/3] w-full overflow-hidden">
         <img
           src={service.image}
           alt={service.title}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110"
         />
       </div>
 

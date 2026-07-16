@@ -25,7 +25,7 @@ export default function ServiceDetail() {
               src={service.image}
               alt={service.title}
               loading="lazy"
-              className="aspect-[4/5] w-full object-cover"
+              className="aspect-[4/3] w-full object-contain"
             />
           </Reveal>
 

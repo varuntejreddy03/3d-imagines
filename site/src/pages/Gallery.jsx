@@ -41,12 +41,12 @@ export default function Gallery() {
 
         <RevealGroup key={active} className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {filtered.map((item) => (
-            <RevealItem key={item.title + item.category} className="group relative overflow-hidden rounded-xl">
+            <RevealItem key={item.title + item.category} className="group relative overflow-hidden rounded-xl bg-surface-alt">
               <img
                 src={item.image}
                 alt={item.title}
                 loading="lazy"
-                className="aspect-square w-full object-cover transition duration-500 group-hover:scale-110"
+                className="aspect-[4/3] w-full object-contain transition duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink/85 via-ink/10 to-transparent p-4 opacity-0 transition group-hover:opacity-100">
                 <p className="eyebrow !text-white/70">{item.category}</p>

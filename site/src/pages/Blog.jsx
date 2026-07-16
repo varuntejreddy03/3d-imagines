@@ -27,7 +27,7 @@ export default function Blog() {
             <img
               src={featured.image}
               alt={featured.title}
-              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
             />
           </div>
           <div className="flex flex-col justify-center p-8 lg:p-12">
@@ -58,7 +58,7 @@ export default function Blog() {
                     src={post.image}
                     alt={post.title}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
