@@ -23,16 +23,18 @@ export default function About() {
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal className="relative mx-auto max-w-md lg:order-2">
-            <div className="absolute -inset-4 rounded-full border border-primary/40" aria-hidden="true" />
-            <div className="absolute -bottom-6 -left-6 text-primary/70">
+            <div className="absolute -inset-4 rounded-full border border-primary/40 pointer-events-none" aria-hidden="true" />
+            <div className="absolute -bottom-6 -left-6 text-primary/70 z-10">
               <BarMotif className="h-14 w-28" />
             </div>
-            <div className="overflow-hidden rounded-[2rem] border-4 border-surface shadow-xl">
+            {/* dark bg card behind image */}
+            <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-[2rem] bg-ink/80" aria-hidden="true" />
+            <div className="relative overflow-hidden rounded-[2rem] shadow-xl">
               <img
                 src={WORKSHOP_IMAGE}
                 alt="High-rise residential tower scale model built by 3D Imagines"
                 loading="lazy"
-                className="aspect-[4/5] w-full object-contain bg-ink"
+                className="w-full object-cover object-top"
               />
             </div>
           </Reveal>

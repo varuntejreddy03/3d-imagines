@@ -66,16 +66,18 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={0.15} className="relative mx-auto max-w-sm">
-            <div className="absolute -inset-4 rounded-full border border-primary/40" aria-hidden="true" />
-            <div className="absolute -bottom-6 -left-6 text-primary/70">
+            <div className="absolute -inset-4 rounded-full border border-primary/40 pointer-events-none" aria-hidden="true" />
+            <div className="absolute -bottom-6 -left-6 text-primary/70 z-10">
               <BarMotif className="h-14 w-28" />
             </div>
-            <div className="overflow-hidden rounded-[2rem] border-4 border-surface shadow-xl">
+            {/* dark bg card behind image */}
+            <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-[2rem] bg-ink/80" aria-hidden="true" />
+            <div className="relative overflow-hidden rounded-[2rem] shadow-xl">
               <img
                 src={ABOUT_IMAGE}
                 alt="Sindhu Hospitals architectural scale model built by 3D Imagines"
                 loading="lazy"
-                className="aspect-[4/5] w-full object-contain bg-ink"
+                className="w-full object-cover object-top"
               />
             </div>
           </Reveal>

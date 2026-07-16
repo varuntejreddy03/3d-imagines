@@ -22,7 +22,7 @@ function Marquee({ items, direction = 'left' }) {
           <div
             key={client.name + i}
             title={client.name}
-            className="flex h-24 w-44 shrink-0 items-center justify-center rounded-xl border border-border bg-surface p-4 grayscale transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:grayscale-0"
+            className="flex h-24 w-44 shrink-0 items-center justify-center rounded-xl border border-border bg-surface p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-lg"
           >
             <img
               src={client.logo}
