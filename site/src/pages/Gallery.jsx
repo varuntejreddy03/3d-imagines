@@ -39,7 +39,7 @@ export default function Gallery() {
           ))}
         </div>
 
-        <RevealGroup className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <RevealGroup key={active} className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {filtered.map((item) => (
             <RevealItem key={item.title + item.category} className="group relative overflow-hidden rounded-xl">
               <img

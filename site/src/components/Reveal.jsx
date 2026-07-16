@@ -26,7 +26,7 @@ export function RevealGroup({ children, className = '', stagger = 0.1 }) {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.15 }}
+      viewport={{ once: true, amount: 0.05 }}
       transition={{ staggerChildren: stagger }}
       className={className}
     >
