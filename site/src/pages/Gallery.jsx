@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import PageHeader from '../components/PageHeader'
 import { RevealGroup, RevealItem } from '../components/Reveal'
 import CTASection from '../components/CTASection'
@@ -8,8 +9,14 @@ import { galleryItems } from '../data/content'
 const FILTERS = ['All', 'Architectural', 'Industrial', 'Locomotive']
 
 export default function Gallery() {
-  const [active, setActive] = useState('All')
+  const [searchParams] = useSearchParams()
+  const [active, setActive] = useState(() => searchParams.get('filter') || 'All')
   const [lightbox, setLightbox] = useState(null)
+
+  useEffect(() => {
+    const f = searchParams.get('filter')
+    if (f) setActive(f)
+  }, [searchParams])
 
   const filtered = useMemo(
     () => (active === 'All' ? galleryItems : galleryItems.filter((item) => {

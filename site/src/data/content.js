@@ -66,6 +66,7 @@ export const serviceCategories = [
     slug: 'architectural-models',
     title: 'Architectural 3D Model Makers',
     kicker: 'Architectural',
+    galleryFilter: 'Architectural',
     description:
       'Exterior, interior, and master-plan models that communicate design intent with precision and scale accuracy.',
     items: [
@@ -79,6 +80,7 @@ export const serviceCategories = [
     slug: 'industrial-models',
     title: 'Industrial 3D Model Makers',
     kicker: 'Industrial',
+    galleryFilter: 'Industrial',
     description:
       'Equipment, locomotive, and process-plant models built to explain complex machinery and workflows clearly.',
     items: [
@@ -92,6 +94,7 @@ export const serviceCategories = [
     slug: '3d-printing',
     title: '3D Printing',
     kicker: 'Digital Fabrication',
+    galleryFilter: 'Locomotive',
     description:
       'SLA and FDM printing for fine-detail components, prototypes, and rapid model iterations.',
     items: ['SLA 3D printing', 'FDM 3D printing'],
@@ -131,6 +134,9 @@ export const galleryItems = [
   { category: 'Architectural', title: 'Convention Centre', image: '/gallery/architectural/img-17.jpeg' },
   { category: 'Architectural', title: 'Heritage Building Model', image: '/gallery/architectural/img-18.jpeg' },
   { category: 'Architectural', title: 'Institutional Campus', image: '/gallery/architectural/img-19.jpeg' },
+  { category: 'Architectural', title: 'Architectural Model', image: '/gallery/architectural/img-20.jpeg' },
+  { category: 'Architectural', title: 'Architectural Model', image: '/gallery/architectural/img-21.jpeg' },
+  { category: 'Architectural', title: 'Architectural Model', image: '/gallery/architectural/img-22.jpeg' },
 
   // Industrial (36 images)
   { category: 'Industrial', title: 'Cement Plant Model', image: '/gallery/industrial/img-01.jpeg' },
@@ -169,6 +175,10 @@ export const galleryItems = [
   { category: 'Industrial', title: 'Stacker Reclaimer', image: '/gallery/industrial/img-34.jpeg' },
   { category: 'Industrial', title: 'Bulk Material Terminal', image: '/gallery/industrial/img-35.jpeg' },
   { category: 'Industrial', title: 'Integrated Plant Overview', image: '/gallery/industrial/img-36.avif' },
+  { category: 'Industrial', title: 'Industrial Model', image: '/gallery/industrial/img-37.jpeg' },
+  { category: 'Industrial', title: 'Industrial Model', image: '/gallery/industrial/img-38.jpeg' },
+  { category: 'Industrial', title: 'Industrial Model', image: '/gallery/industrial/img-39.jpeg' },
+  { category: 'Industrial', title: 'Industrial Model', image: '/gallery/industrial/img-40.jpeg' },
 
   // Locomotive / Engineering (15 images)
   { category: 'Engineering', title: 'Rail Borne Maintenance Vehicle', image: '/gallery/locomotive/img-01.jpeg' },
@@ -298,44 +308,10 @@ export const clients = [
   { name: 'SAN Engineering & Locomotive', logo: '/clients/locomotive/san-engineering-locomotive.jpg', category: 'Engineering' },
 ]
 
-export const blogPosts = [
-  {
-    slug: 'why-scale-models-still-matter',
-    title: 'Why Physical Scale Models Still Matter in a Digital Age',
-    excerpt:
-      'Renders and VR are everywhere — yet a physical scale model closes deals renders can’t. Here’s why tactile models remain the strongest presentation tool.',
-    category: 'Insights',
-    date: 'June 2026',
-    image: '/gallery/architectural/img-19.jpeg',
-  },
-  {
-    slug: 'choosing-the-right-scale',
-    title: 'How to Choose the Right Scale for Your Architectural Model',
-    excerpt:
-      'From 1:50 to 1:500 — picking the right ratio balances detail, footprint, and budget. A practical guide for architects and developers.',
-    category: 'Guides',
-    date: 'May 2026',
-    image: '/gallery/architectural/img-04.jpeg',
-  },
-  {
-    slug: 'sla-vs-fdm-3d-printing',
-    title: 'SLA vs FDM: Which 3D Printing Method Fits Your Model?',
-    excerpt:
-      'Fine detail or structural strength? We break down the two 3D printing technologies we use and when each one wins.',
-    category: 'Technology',
-    date: 'April 2026',
-    image: '/gallery/industrial/img-30.jpeg',
-  },
-  {
-    slug: 'inside-our-model-making-process',
-    title: 'Inside Our Model-Making Process: From Drawing to Delivery',
-    excerpt:
-      'A behind-the-scenes look at how a set of drawings becomes a finished, presentation-ready scale model in our Hyderabad workshop.',
-    category: 'Behind the Scenes',
-    date: 'March 2026',
-    image: '/gallery/locomotive/img-10.jpeg',
-  },
-]
+import { blogPosts as parsedBlogPosts } from './blogPosts'
+
+export const blogPosts = parsedBlogPosts
+
 
 export const navLinks = [
   { label: 'Home', to: '/' },

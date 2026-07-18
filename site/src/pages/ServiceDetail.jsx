@@ -42,9 +42,14 @@ export default function ServiceDetail() {
                 </li>
               ))}
             </ul>
-            <Button to="/contact" variant="solid" className="mt-8">
-              Request a Quote
-            </Button>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button to="/contact" variant="solid">
+                Request a Quote
+              </Button>
+              <Button to={`/gallery?filter=${service.galleryFilter}`} variant="outline">
+                View Gallery →
+              </Button>
+            </div>
           </Reveal>
         </div>
       </section>
