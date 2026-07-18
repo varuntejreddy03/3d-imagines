@@ -10,8 +10,7 @@ export default function Reveal({ children, delay = 0, className = '', as = 'div'
   return (
     <Component
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      animate="visible"
       variants={variants}
       transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
       className={className}
@@ -25,8 +24,7 @@ export function RevealGroup({ children, className = '', stagger = 0.1 }) {
   return (
     <motion.div
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.05 }}
+      animate="visible"
       transition={{ staggerChildren: stagger }}
       className={className}
     >
