@@ -79,7 +79,7 @@ export default function Contact() {
                 height="280"
                 style={{ border: 0 }}
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
           </Reveal>

@@ -13,7 +13,7 @@ export const business = {
     '1st Floor, 1-7-139/81, Golconda X Roads, Musheerabad, Zamistanpur, SRK Nagar, Hyderabad, Telangana 500020',
   mapLink: 'https://maps.app.goo.gl/PYynNySM84cjWpj97',
   mapEmbed:
-    'https://www.google.com/maps?q=1-7-139/81,+Golconda+X+Roads,+Musheerabad,+Zamistanpur,+SRK+Nagar,+Hyderabad,+Telangana+500020&output=embed',
+    'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3807.019671096242!2d78.50099135!3d17.4108436!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99eaeb0517d3%3A0xada1c0d0c5b8cd79!2s3D%20imagines-3d%20model%20makers!5e0!3m2!1sen!2sin!4v1784372342434!5m2!1sen!2sin',
   hours: [
     { days: 'Monday – Saturday', time: '9:00 AM – 8:00 PM' },
     { days: 'Sunday', time: '9:00 AM – 12:30 PM' },
@@ -174,7 +174,6 @@ export const galleryItems = [
   { category: 'Industrial', title: 'Bag Filter Assembly', image: '/gallery/industrial/img-33.jpeg' },
   { category: 'Industrial', title: 'Stacker Reclaimer', image: '/gallery/industrial/img-34.jpeg' },
   { category: 'Industrial', title: 'Bulk Material Terminal', image: '/gallery/industrial/img-35.jpeg' },
-  { category: 'Industrial', title: 'Integrated Plant Overview', image: '/gallery/industrial/img-36.avif' },
   { category: 'Industrial', title: 'Industrial Model', image: '/gallery/industrial/img-37.jpeg' },
   { category: 'Industrial', title: 'Industrial Model', image: '/gallery/industrial/img-38.jpeg' },
   { category: 'Industrial', title: 'Industrial Model', image: '/gallery/industrial/img-39.jpeg' },
